@@ -1,0 +1,64 @@
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(133, 131, 131);
+  overflow: hidden;
+}
+
+.carousel {
+  perspective: 1000px;
+}
+
+.carousel__container {
+  width: 500px;
+  height: 100px;
+  position: relative;
+  transform-style: preserve-3d;
+  animation: spin 20s infinite linear;
+}
+
+.carousel__item {
+  position: absolute;
+  width: 200px;
+  height: 100px;
+  background: #ff5722;
+  color: #fff;
+  line-height: 100px;
+  text-align: center;
+  font-size: 2rem;
+  border-radius: 10px;
+}
+
+/* Positioning items in 3D space */
+.carousel__item:nth-child(1) {
+  transform: rotateY(0deg) translateZ(400px);
+}
+.carousel__item:nth-child(2) {
+  transform: rotateY(72deg) translateZ(400px);
+}
+.carousel__item:nth-child(3) {
+  transform: rotateY(144deg) translateZ(400px);
+}
+.carousel__item:nth-child(4) {
+  transform: rotateY(216deg) translateZ(400px);
+}
+.carousel__item:nth-child(5) {
+  transform: rotateY(288deg) translateZ(400px);
+}
+
+/* Animation */
+@keyframes spin {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
+}
+img{
+  width:200px ;
+  height: 400px;
+}
